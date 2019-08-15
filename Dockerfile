@@ -2,6 +2,7 @@ FROM debian:stretch-slim
 
 MAINTAINER https://www.oda-alexandre.com/
 
+ENV USER heimdall
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
