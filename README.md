@@ -4,11 +4,13 @@
 
 ## INDEX
 
-- [Badges](#BADGES)
-- [Introduction](#INTRODUCTION)
-- [Prerequisites](#PREREQUISITESITES)
-- [Install](#INSTALL)
-- [License](#LICENSE)
+- [HEIMDALL](#heimdall)
+  - [INDEX](#index)
+  - [BADGES](#badges)
+  - [INTRODUCTION](#introduction)
+  - [PREREQUISITES](#prerequisites)
+  - [INSTALL](#install)
+  - [LICENSE](#license)
 
 ## BADGES
 
@@ -34,7 +36,7 @@ Automatically updated on :
 
 ## INSTALL
 
-```docker run -ti --rm --name heimdall -v ${HOME}:/root -v /dev/bus/usb:/dev/bus/usb --privileged alexandreoda/heimdall```
+```docker run -d --name heimdall -v ${HOME}:/home/heimdall -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/bus/usb:/dev/bus/usb -e DISPLAY --privileged alexandreoda/heimdall```
 
 ## LICENSE
 
