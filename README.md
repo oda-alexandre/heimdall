@@ -1,6 +1,6 @@
 # HEIMDALL
 
-<img src="https://doc.ubuntu-fr.org/lib/exe/fetch.php?w=350&tok=7c1ba7&media=http%3A%2F%2Fimg11.hostingpics.net%2Fpics%2F337666capturedcran1.png" width="300" height="200"/>
+<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/13827678/heimdalllogo.png" width="300" height="200"/>
 
 ## INDEX
 
