@@ -40,7 +40,8 @@ Automatically updated on :
 
 ### DOCKER RUN
 
-```docker run -d --name heimdall -v ${HOME}:/home/heimdall -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/bus/usb:/dev/bus/usb -e DISPLAY alexandreoda/heimdall
+```\
+docker  run -d --name heimdall -v ${HOME}:/home/heimdall -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/bus/usb:/dev/bus/usb -e DISPLAY alexandreoda/heimdall
 ```
 
 ### DOCKER COMPOSE
