@@ -10,6 +10,8 @@
   - [INTRODUCTION](#introduction)
   - [PREREQUISITES](#prerequisites)
   - [INSTALL](#install)
+    - [DOCKER RUN](#docker-run)
+    - [DOCKER COMPOSE](#docker-compose)
   - [LICENSE](#license)
 
 ## BADGES
@@ -24,7 +26,7 @@ Docker image of :
 
 Continuous integration on :
 
-- [gitlab](https://gitlab.com/oda-alexandre/heimdall/pipelines)
+- [gitlab pipelines](https://gitlab.com/oda-alexandre/heimdall/pipelines)
 
 Automatically updated on :
 
@@ -36,7 +38,30 @@ Automatically updated on :
 
 ## INSTALL
 
-```docker run -d --name heimdall -v ${HOME}:/home/heimdall -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/bus/usb:/dev/bus/usb -e DISPLAY --privileged alexandreoda/heimdall```
+### DOCKER RUN
+
+```docker run -d --name heimdall -v ${HOME}:/home/heimdall -v /tmp/.X11-unix/:/tmp/.X11-unix/ -v /dev/bus/usb:/dev/bus/usb -e DISPLAY alexandreoda/heimdall
+```
+
+### DOCKER COMPOSE
+
+```yml
+version: "3.7"
+
+services:
+  heimdall:
+    container_name: heimdall
+    image: alexandreoda/heimdall
+    restart: no
+    network_mode: none
+    privileged: false
+    environment:
+      - DISPLAY
+    volumes:
+      - "${HOME}:/home/heimdall"
+      - "/tmp/.X11-unix/:/tmp/.X11-unix/"
+      - "/dev/bus/usb:/dev/bus/usb"
+```
 
 ## LICENSE
 
