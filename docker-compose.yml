@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  heimdall:
+    container_name: heimdall
+    image: alexandreoda/heimdall
+    restart: no
+    network_mode: none
+    privileged: false
+    environment:
+      - DISPLAY
+    volumes:
+      - "${HOME}:/home/heimdall"
+      - "/tmp/.X11-unix/:/tmp/.X11-unix/"
+      - "/dev/bus/usb:/dev/bus/usb"
