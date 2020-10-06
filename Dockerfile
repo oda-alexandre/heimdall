@@ -7,7 +7,7 @@ ENV HOME /home/${USER}
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
-  apt-get update && apt-get install -y --no-install-recommends \
+  apt-get update && apt-get install -y \
   sudo \
   usbutils \
   android-tools-* \
